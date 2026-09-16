@@ -1,0 +1,59 @@
+import React from 'react';
+import classNames from 'classnames';
+
+import { observer, useStore } from '@deriv/stores';
+import { useDevice } from '@deriv-com/ui';
+
+import { AccountActions } from 'App/Components/Layout/Header';
+import { AccountsInfoLoader } from 'App/Components/Layout/Header/Components/Preloader';
+import NewVersionNotification from 'App/Containers/new-version-notification';
+// [AI]
+import BrandLogo from 'App/Components/Elements/BrandLogo/brand-logo';
+// [/AI]
+
+const HeaderLegacy = observer(() => {
+    const { client, ui, notifications } = useStore();
+    const { is_logged_in, is_logging_in } = client;
+    const { is_app_disabled, is_route_modal_on } = ui;
+    const { addNotificationMessage, client_notifications, removeNotificationMessage } = notifications;
+
+    const { isMobile } = useDevice();
+
+    const addUpdateNotification = () => addNotificationMessage(client_notifications?.new_version_available);
+    const removeUpdateNotification = React.useCallback(
+        () => removeNotificationMessage({ key: 'new_version_available' }),
+        [removeNotificationMessage]
+    );
+
+    React.useEffect(() => {
+        document.addEventListener('IgnorePWAUpdate', removeUpdateNotification);
+        return () => document.removeEventListener('IgnorePWAUpdate', removeUpdateNotification);
+    }, [removeUpdateNotification]);
+
+    return (
+        <header
+            className={classNames('header', {
+                'header--is-disabled': is_app_disabled || is_route_modal_on,
+            })}
+        >
+            <div className='header__menu-items'>
+                {isMobile && (
+                    <div className='header__logo'>
+                        {/* [AI] Replaced Deriv's DTrader icon with the AlphaStream brand mark */}
+                        <BrandLogo width='32px' height='32px' />
+                    </div>
+                )}
+                {is_logging_in ? (
+                    <div id='dt_core_header_acc-info-preloader' className='acc-info__preloader'>
+                        <AccountsInfoLoader is_logged_in={is_logged_in} />
+                    </div>
+                ) : (
+                    <AccountActions />
+                )}
+            </div>
+            <NewVersionNotification onUpdate={addUpdateNotification} />
+        </header>
+    );
+});
+
+export default HeaderLegacy;

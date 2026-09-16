@@ -1,0 +1,17 @@
+.powered-by-deriv {
+    padding: 0.8rem 1.6rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-less-prominent);
+
+    &__badge {
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+    }
+
+    &__disclaimer {
+        max-width: 60rem;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+}

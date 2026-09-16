@@ -1,0 +1,79 @@
+{
+    "brand_name": "Alphastream",
+    "brand_logo": "brand/brand-logo.svg",
+    "brand_logo_dark": "brand/brand-logo-dark.svg",
+    "brand_domain": "alphastream.com",
+    "brand_hostname": {
+        "staging": "staging.trader.alphastream.com",
+        "production": "trader.alphastream.com",
+        "production_aliases": [
+            "alphastream-acvc.vercel.app"
+        ]
+    },
+    "platform": {
+        "name": "Alphastream Trader",
+        "description": "Institutional intelligence, democratized.",
+        "logo": "brand/platform-logo.svg",
+        "home_url": "/",
+        "help_centre_url": "https://alphastream.com/help",
+        "bot_url": {
+            "staging": "https://alphastream-bot.vercel.app",
+            "production": "https://alphastream-bot.vercel.app"
+        }
+    },
+    "signup_url": {
+        "production": "https://home.deriv.com/dashboard/signup?affiliate_token=YOUR_AFFILIATE_TOKEN&utm_campaign=YOUR_UTM_CAMPAIGN",
+        "staging": "https://staging-home.deriv.com/dashboard/signup?affiliate_token=YOUR_AFFILIATE_TOKEN&utm_campaign=YOUR_UTM_CAMPAIGN"
+    },
+    "deposit_url": {
+        "staging": "https://staging.trader.alphastream.com/transfer",
+        "production": "https://trader.alphastream.com/transfer"
+    },
+    "auth": {
+        "staging": "https://staging-auth.deriv.com",
+        "production": "https://auth.deriv.com",
+        "oauth_scopes": [
+            "trade",
+            "account_manage"
+        ],
+        "oauth_redirect_uri_staging": "https://alphastream-acvc.vercel.app",
+        "oauth_redirect_uri_production": "https://alphastream-acvc.vercel.app",
+        "oauth_app_id": "",
+        "affiliate_token": "9Y55MN6NZWX5",
+        "utm_campaign": "",
+        "oauth_client_id": "34lQiQuNGUul6eMXKWo0E"
+    },
+    "derivws": {
+        "staging": "https://staging-api.derivws.com",
+        "production": "https://api.derivws.com"
+    },
+    "api_core": {
+        "staging": "staging-api-core.deriv.com",
+        "production": "api-core.deriv.com"
+    },
+    "api": {
+        "staging": "staging-api.deriv.com",
+        "production": "api.deriv.com"
+    },
+    "colors": {
+        "primary": "#1AB79D",
+        "secondary": "#6467F2",
+        "tertiary": "#FBBF24",
+        "success": "#22C55E",
+        "danger": "#EF4444",
+        "warning": "#FBBF24",
+        "info": "#2196f3",
+        "neutral": "#94A3B8",
+        "black": "#0B111E",
+        "white": "#F8FAFC"
+    },
+    "color_variants": {
+        "auto_generate": true,
+        "lighten_percentage": 10,
+        "darken_percentage": 10
+    },
+    "features": {
+        "dark_mode": true,
+        "language_switcher": false
+    }
+}

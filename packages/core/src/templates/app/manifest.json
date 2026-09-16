@@ -1,0 +1,51 @@
+{
+    "name": "Alphastream",
+    "short_name": "Alphastream",
+    "description": "Institutional intelligence, democratized.",
+    "id": "/",
+    "start_url": "{start_url_base}",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "{root_url}public/images/common/logos/platform_logos/ic_platform_alphastream_72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "{root_url}public/images/common/logos/platform_logos/ic_platform_alphastream_96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "{root_url}public/images/common/logos/platform_logos/ic_platform_alphastream_144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "{root_url}public/images/common/logos/platform_logos/ic_platform_alphastream_192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "{root_url}public/images/common/logos/platform_logos/ic_platform_alphastream_256x256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "{root_url}public/images/common/logos/platform_logos/ic_platform_alphastream_384x384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "{root_url}public/images/common/logos/platform_logos/ic_platform_alphastream_512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "background_color": "#181c25",
+    "theme_color": "#1AB79D",
+    "prefer_related_applications": false,
+    "gcm_user_visible_only": true,
+    "gcm_sender_id": "370236002280"
+}
